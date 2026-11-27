@@ -1,0 +1,420 @@
+.vendor-earnings {
+  --finance-ink: #08264A;
+  --finance-muted: #788391;
+  --finance-line: #E2E8F0;
+  --finance-orange: #FF9800;
+  min-width: 0;
+  color: #202A36;
+}
+
+.vendor-earnings,
+.vendor-earnings * {
+  box-sizing: border-box;
+}
+
+.vendor-earnings .finance-panel {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.vendor-earnings .finance-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 24px;
+  background: linear-gradient(115deg, #fff 0%, #FFF8EE 100%);
+  border: 1px solid var(--finance-line);
+  border-top: 3px solid var(--finance-orange);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgb(6 27 53 / 4%);
+}
+
+.vendor-earnings .finance-heading .eyebrow {
+  margin: 0;
+  color: #D97706;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.vendor-earnings .finance-heading h2 {
+  margin: 5px 0;
+  color: var(--finance-ink);
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.vendor-earnings .finance-heading .muted {
+  margin: 0;
+  color: var(--finance-muted);
+  font-size: 12px;
+}
+
+.vendor-earnings .finance-heading-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.vendor-earnings button {
+  min-height: 36px;
+  padding: 8px 12px;
+  color: var(--finance-ink);
+  background: #fff;
+  border: 1px solid var(--finance-line);
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: background-color 150ms ease, border-color 150ms ease, transform 150ms ease;
+}
+
+.vendor-earnings button:hover:not(:disabled) {
+  border-color: #F3B54A;
+  background: #FFF8EE;
+}
+
+.vendor-earnings button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.vendor-earnings button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.vendor-earnings .finance-heading-actions button:first-child,
+.vendor-earnings .apply-filter,
+.vendor-earnings .commission-control button,
+.vendor-earnings .actions button:not(.danger) {
+  color: #08264A;
+  background: var(--finance-orange);
+  border-color: var(--finance-orange);
+}
+
+.vendor-earnings .finance-heading-actions button:first-child:hover:not(:disabled),
+.vendor-earnings .apply-filter:hover:not(:disabled),
+.vendor-earnings .commission-control button:hover:not(:disabled),
+.vendor-earnings .actions button:not(.danger):hover:not(:disabled) {
+  background: #F28C00;
+  border-color: #F28C00;
+}
+
+.vendor-earnings .finance-panel > .error {
+  margin: 0;
+  padding: 12px 14px;
+  color: #B42318;
+  background: #FEF3F2;
+  border: 1px solid #FECDCA;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.vendor-earnings .finance-filters,
+.vendor-earnings .finance-table,
+.vendor-earnings .finance-metric {
+  min-width: 0;
+  background: #fff;
+  border: 1px solid var(--finance-line);
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgb(6 27 53 / 3%);
+}
+
+.vendor-earnings .finance-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 16px;
+}
+
+.vendor-earnings .filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.vendor-earnings .filter-buttons button {
+  min-height: 32px;
+  padding: 6px 10px;
+  color: #526174;
+  background: #fff;
+  border-color: var(--finance-line);
+}
+
+.vendor-earnings .filter-buttons button.selected {
+  color: #08264A;
+  background: #FFF1DE;
+  border-color: var(--finance-orange);
+}
+
+.vendor-earnings .filter-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.vendor-earnings label {
+  display: block;
+  margin: 0;
+  color: #526174;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.vendor-earnings input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 34px;
+  margin: 4px 0 0;
+  padding: 7px 9px;
+  color: #202A36;
+  background: #fff;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 11px;
+}
+
+.vendor-earnings input:focus {
+  border-color: var(--finance-orange);
+  outline: 3px solid rgb(255 152 0 / 14%);
+}
+
+.vendor-earnings .filter-inputs input {
+  width: 160px;
+}
+
+.vendor-earnings .apply-filter {
+  margin-left: auto;
+}
+
+.vendor-earnings .finance-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+  gap: 10px;
+}
+
+.vendor-earnings .finance-metric {
+  padding: 14px;
+}
+
+.vendor-earnings .finance-metric span {
+  display: block;
+  color: var(--finance-muted);
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.vendor-earnings .finance-metric strong {
+  display: block;
+  margin-top: 8px;
+  color: var(--finance-ink);
+  font-size: 19px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.vendor-earnings .finance-metric:nth-child(2n) strong {
+  color: #C46B00;
+}
+
+.vendor-earnings .finance-table {
+  overflow: hidden;
+  padding: 0 16px;
+}
+
+.vendor-earnings .finance-table > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  min-height: 55px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--finance-line);
+}
+
+.vendor-earnings .finance-table > header h3 {
+  margin: 0;
+  color: var(--finance-ink);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.vendor-earnings .finance-table > header > span {
+  color: var(--finance-muted);
+  font-size: 10px;
+}
+
+.vendor-earnings .finance-table article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px 0;
+  border-bottom: 1px solid #EEF2F6;
+}
+
+.vendor-earnings .finance-table article:last-of-type {
+  border-bottom: 0;
+}
+
+.vendor-earnings .vendor-summary {
+  min-width: 0;
+  flex: 1;
+}
+
+.vendor-earnings .vendor-summary strong {
+  color: var(--finance-ink);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.vendor-earnings .vendor-summary p {
+  margin: 5px 0 0;
+  color: var(--finance-muted);
+  font-size: 10px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.vendor-earnings .commission-control {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.vendor-earnings .commission-control label {
+  min-width: 125px;
+}
+
+.vendor-earnings .commission-control input {
+  width: 125px;
+}
+
+.vendor-earnings .actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 7px;
+  max-width: 260px;
+}
+
+.vendor-earnings .actions button {
+  white-space: nowrap;
+}
+
+.vendor-earnings .actions button.danger {
+  color: #B42318;
+  background: #fff;
+  border-color: #FECDCA;
+}
+
+.vendor-earnings .actions button.danger:hover:not(:disabled) {
+  background: #FEF3F2;
+  border-color: #F97066;
+}
+
+.vendor-earnings .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 0;
+  color: var(--finance-muted);
+  font-size: 10px;
+}
+
+.vendor-earnings .pagination > div {
+  display: flex;
+  gap: 6px;
+}
+
+.vendor-earnings .pagination button {
+  min-height: 30px;
+  padding: 5px 9px;
+}
+
+.vendor-earnings .empty {
+  padding: 22px 0;
+  color: var(--finance-muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .vendor-earnings .finance-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .vendor-earnings .finance-filters {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .vendor-earnings .filter-inputs,
+  .vendor-earnings .filter-inputs label,
+  .vendor-earnings .filter-inputs input,
+  .vendor-earnings .apply-filter {
+    width: 100%;
+  }
+
+  .vendor-earnings .apply-filter {
+    margin-left: 0;
+  }
+
+  .vendor-earnings .finance-table article {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .vendor-earnings .commission-control {
+    align-items: flex-end;
+  }
+
+  .vendor-earnings .actions {
+    justify-content: flex-start;
+    max-width: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .vendor-earnings .finance-heading-actions {
+    width: 100%;
+  }
+
+  .vendor-earnings .finance-heading-actions button {
+    flex: 1;
+  }
+
+  .vendor-earnings .filter-buttons button {
+    flex: 1;
+  }
+
+  .vendor-earnings .finance-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .vendor-earnings .finance-metric {
+    padding: 11px;
+  }
+
+  .vendor-earnings .finance-metric strong {
+    font-size: 16px;
+  }
+
+  .vendor-earnings .finance-table {
+    padding: 0 12px;
+  }
+}

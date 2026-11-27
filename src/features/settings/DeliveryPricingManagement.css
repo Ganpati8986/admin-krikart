@@ -1,0 +1,171 @@
+.delivery-pricing {
+  display: grid;
+  gap: 18px;
+  color: #202A36;
+}
+
+.delivery-pricing-heading,
+.delivery-pricing-card {
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgb(34 61 43 / 4%);
+}
+
+.delivery-pricing-heading h2 {
+  margin: 4px 0 6px;
+  font-size: 22px;
+}
+
+.delivery-pricing-heading p:last-child,
+.delivery-method-note {
+  color: #788391;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.delivery-pricing-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.8fr);
+  align-items: start;
+  gap: 18px;
+}
+
+.delivery-pricing-card h3 {
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #E2E8F0;
+  font-size: 16px;
+}
+
+.delivery-pricing-card form,
+.delivery-pricing-card {
+  min-width: 0;
+}
+
+.delivery-pricing-card form {
+  display: grid;
+  gap: 12px;
+}
+
+.delivery-pricing-card label {
+  display: grid;
+  gap: 5px;
+  color: #08264A;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.delivery-pricing-card input:not([type="checkbox"]),
+.delivery-pricing-card select {
+  width: 100%;
+  min-height: 38px;
+  padding: 8px 10px;
+  color: #202A36;
+  background: #fff;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.delivery-pricing-card input:focus,
+.delivery-pricing-card select:focus {
+  border-color: #FF9800;
+  outline: 2px solid rgb(255 152 0 / 15%);
+}
+
+.delivery-pricing-card button {
+  min-height: 39px;
+  padding: 9px 14px;
+  color: #08264A;
+  background: #FF9800;
+  border: 0;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.delivery-pricing-card button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.delivery-field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.delivery-pricing-card label.delivery-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 24px;
+}
+
+.delivery-pricing-card label.delivery-check input {
+  accent-color: #FF9800;
+}
+
+.delivery-pricing-alert {
+  margin: 0;
+  padding: 11px 14px;
+  border-radius: 7px;
+  font-size: 12px;
+}
+
+.delivery-pricing-alert.error {
+  color: #873e35;
+  background: #fff0ed;
+}
+
+.delivery-pricing-alert.success {
+  color: #286246;
+  background: #edf7eb;
+}
+
+.delivery-config-history {
+  display: grid;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.delivery-config-history h4 {
+  margin: 0 0 4px;
+  font-size: 13px;
+}
+
+.delivery-config-history article {
+  display: grid;
+  gap: 4px;
+  padding: 10px;
+  background: #F5F7FA;
+  border: 1px solid #E2E8F0;
+  border-radius: 7px;
+  color: #788391;
+  font-size: 10px;
+}
+
+.delivery-config-history article strong {
+  color: #08264A;
+  font-size: 11px;
+}
+
+.delivery-config-history p {
+  color: #788391;
+  font-size: 11px;
+}
+
+@media (max-width: 900px) {
+  .delivery-pricing-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .delivery-field-grid {
+    grid-template-columns: 1fr;
+  }
+}
